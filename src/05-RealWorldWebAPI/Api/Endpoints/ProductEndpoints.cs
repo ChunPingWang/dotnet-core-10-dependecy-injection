@@ -16,8 +16,7 @@ public static class ProductEndpoints
     public static void MapProductEndpoints(this WebApplication app)
     {
         var group = app.MapGroup("/api/products")
-            .WithTags("Products")
-            .WithOpenApi();
+            .WithTags("Products");
 
         // GET /api/products - 取得所有產品
         group.MapGet("/", async (

@@ -14,8 +14,7 @@ public static class OrderEndpoints
     public static void MapOrderEndpoints(this WebApplication app)
     {
         var group = app.MapGroup("/api/orders")
-            .WithTags("Orders")
-            .WithOpenApi();
+            .WithTags("Orders");
 
         // POST /api/orders - 建立訂單
         group.MapPost("/", async (
